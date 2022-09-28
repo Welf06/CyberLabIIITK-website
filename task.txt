@@ -1,0 +1,4 @@
+Todos:
+    events page
+    add iiitk logo + clabs logo
+
