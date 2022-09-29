@@ -1,4 +1,11 @@
 Todos:
+    upadate people and research areas
+    expert talks
+    research publications
+    consultancy work
     events page
     add iiitk logo + clabs logo
 
+required 
+    sharon-linkedin
+    silam-linkedin
