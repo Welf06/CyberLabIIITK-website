@@ -5,108 +5,79 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyberlabs</title>
+  <link rel="stylesheet" href="./CSS/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #ffffff;">
+<body style="background-color: #ffffff;" onload="start()">
+  <canvas id=c></canvas>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light " id="home" style="background-color:#e3f2fd;">
-    <div class="container-fluid ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="home">
+    <div class="container-fluid ">      
       <a class="navbar-brand" href="#">
-        <img src=./assets/images/clabslogoNew.png alt="" width="85" height="80">
-        CyberLabs
+        <img class="img-thumbnail" src=./assets/images/clabslogoNew.png alt="" width="80rem" >
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav d-flex w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
+        <ul class="navbar-nav d-flex w-100 justify-content-center bg-dark ">
+          <!-- <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li> -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Research
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#R1">Research Areas</a></li>
-              <li><a class="dropdown-item" href="#R2">Research Publications</a></li>
-              <li><a class="dropdown-item" href="#R2">Research Talks</a></li>
+              <!-- <li><a class="dropdown-item" href="#R1">Research Areas</a></li> -->
+              <li><a class="dropdown-item" href="#R1">Research Publications</a></li>
+              <li><a class="dropdown-item" href="#R1">Research Talks</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#F1">Funded Projects/Consultancy works</a>
+            <a class="nav-link" href="#R1">Funded Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Events Organised</a>
+            <a class="nav-link" href="#R1">Consultancy works</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="#eve">Events Organised</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gal">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Contact">Contact Us</a>
           </li>
         </ul>
       </div>
+      <a class="navbar-brand d-none d-lg-block" href="#">
+        <img class="img-thumbnail" src="assets/images/iiitklogo.png" alt="" width="150" height="80">
+      </a>
     </div>
+    
   </nav>
+  
 
-  <!-- Carousel -->
-  <div class="contaner my-3">
-    <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-indicators ">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-          class="active d-none d-sm-block" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="d-none d-sm-block"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="d-none d-sm-block"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner" >
-        <div class="carousel-item active">
-          <img src="./assets/images/carousel/carousel1.jpg" class="mx-auto d-block" width="275rem" alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>First slide label</h5>
-            <p>Some representative placeholder content for the first slide.</p>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/images/carousel/carousel2.png" class="mx-auto d-block" width="275rem"  alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>Second slide label</h5>
-            <p>Some representative placeholder content for the second slide.</p>
-          </div> -->
-        </div>
-        <div class="carousel-item">
-          <img src="./assets/images/carousel/carousel3.jpeg" class="mx-auto d-block" width="275rem"  alt="...">
-          <!-- <div class="carousel-caption d-none d-md-block">
-            <h5>Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div> -->
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+  <!-- Intro to CyberLabs -->
+  <div class="container text-center neonText d-none d-md-block" id="CLintro" style="font-size: 50px;">
+    
   </div>
-
+  <div class="container text-center align-middle neonText d-block d-md-none mx-auto" id="CLintro2" style="font-size:25px;">
+    
+  </div>
+  
   <!-- People & Research Areas -->
-  <div class="container-lg-fluid container-lg mt-4 ">
-    <h3 class="display-4 text-center mb-3" id="R1">People & Research Areas</h3>
+  <div class="container-lg-fluid container-lg" style="padding-top: 500px;">
+    
+    <!-- <h3 class="display-4 text-center mb-3" id="R1">People & Research Areas</h3> -->
     <div class="row">
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -116,7 +87,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://in.linkedin.com/in/panchami-v-529a724b" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -125,7 +96,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="mailto:panchamam036@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -137,9 +108,9 @@
             <div class="col-7 col-md-7">
               <ul class="list-group text-center">
                 <div class="w-100">
-                  <h5>Dr. Panchami. V</h5>
+                  <h5 style="color: #262262;">Dr. Panchami. V</h5>
                 </div>
-                <small>Founder and CTO of CyberLabs IIIT Kottayam</small>
+                <small style="color: #262262;">Founder and CTO of CyberLabs IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -170,7 +141,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -180,7 +151,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://www.linkedin.com/in/mahima-mary-mathews-5b368126/" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -189,7 +160,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="mailto: mahimammphd2019@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -234,7 +205,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -244,7 +215,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://in.linkedin.com/in/manjith-b-c-00a716227" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -254,7 +225,7 @@
                 <div class="col-5 offset-0 my-1">
                   <a href="https://in.linkedin.com/company/cyberlabs-iiitkottayam" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -301,7 +272,7 @@
     </div>
     <div class="row">
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -309,9 +280,8 @@
               </div>
               <div class="row">
                 <div class="col-5 offset-1 my-1">
-                  <a href="" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                  <a href="" style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -320,7 +290,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -362,7 +332,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -371,7 +341,7 @@
               <div class="row">
                 <div class="col-5 offset-1 my-1">
                   <a href="" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -381,7 +351,7 @@
                 <div class="col-5 offset-0 my-1">
                   <a href="https://in.linkedin.com/company/cyberlabs-iiitkottayam" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -425,7 +395,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -435,7 +405,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://in.linkedin.com/in/bhanu-chander-4300806b" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -443,9 +413,8 @@
                   </a>
                 </div>
                 <div class="col-5 offset-0 my-1">
-                  <a href="mailto:bhanu@iiitkottayam.ac.in" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                  <a href="mailto:bhanu@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -491,7 +460,7 @@
     </div>
     <div class="row">
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -501,7 +470,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://www.linkedin.com/in/lavanya-settipalli-6482a4185/" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -509,9 +478,8 @@
                   </a>
                 </div>
                 <div class="col-5 offset-0 my-1">
-                  <a href="mailto:lavanya@iiitkottayam.ac.in" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                  <a href="mailto:lavanya@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -555,7 +523,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -563,9 +531,9 @@
               </div>
               <div class="row">
                 <div class="col-5 offset-1 my-1">
-                  <a href="https://www.linkedin.com/in/dr-amit-kumar-roy-iiitk-697174247/" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                  <a href="https://www.linkedin.com/in/dr-amit-kumar-roy-iiitk-697174247/"
+                    style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -574,7 +542,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="mailto:amit@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -617,7 +585,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -627,7 +595,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://in.linkedin.com/in/pratik-raj-084a6b202" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -635,9 +603,8 @@
                   </a>
                 </div>
                 <div class="col-5 offset-0 my-1">
-                  <a href="mailto:pratikraj20bcs112@iiitkottayam.ac.in" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                  <a href="mailto:pratikraj20bcs112@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -681,7 +648,7 @@
     </div>
     <div class="row">
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -691,7 +658,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://www.linkedin.com/in/niranjannagumalli/" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -699,9 +666,8 @@
                   </a>
                 </div>
                 <div class="col-5 offset-0 my-1">
-                  <a href="mailto:niranjan21bcs17@iiitkottayam.ac.in" style="text-decoration: none;"
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                  <a href="mailto:niranjan21bcs17@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -745,7 +711,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -755,7 +721,7 @@
                 <div class="col-5 offset-1 my-1">
                   <a href="https://www.linkedin.com/in/samhitha-bharthulwar/" style="text-decoration: none;"
                     target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -764,7 +730,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="mailto:samhitha21bcy9@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -806,7 +772,7 @@
         </div>
       </div>
       <div class="col-sm-4 my-2">
-        <div class="card text-dark bg-light mx-auto h-100">
+        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -815,7 +781,7 @@
               <div class="row">
                 <div class="col-5 offset-1 my-1">
                   <a href="https://www.linkedin.com/in/rohith-ninan" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31" class="bi bi-linkedin"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5" class="bi bi-linkedin"
                       viewBox="0 0 16 16">
                       <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
@@ -824,7 +790,7 @@
                 </div>
                 <div class="col-5 offset-0 my-1">
                   <a href="mailto:rohith21bec7@iiitkottayam.ac.in" style="text-decoration: none;" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#292e31"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#0077b5"
                       class="bi bi-envelope-fill" viewBox="0 0 16 16">
                       <path
                         d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
@@ -869,16 +835,157 @@
   </div>
 
 
-  <!-- Funded Projects & Consultancy Works -->
-  <div class="conatiner-fluid container-md mt-4">
-    <h1 class="display-5 text-center" id="F1">Funded Projects & Consultancy Works</h1>
+  <!-- Accordion -->
+  <div class="conatiner-fluid container mt-5" id="R1">
+    <!-- <h1 class="display-5 text-center" id="F1">Funded Projects & Consultancy Works</h1> -->
     <div class="accordion mt-3" id="accordionExample">
+
+      <!-- Research Publication -->
+      <div class="accordion-item">
+        <h1 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <h3> Research Publications</h3>
+          </button>
+        </h1>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Vishnu Ajith, Mahima Mary Mathews and Panchami V, (2022) ” Frequency Analysis on Caesar Cypher
+                      using Quantum State Vector Machine '', IEEE IATMSI- 2022, organized by ABV- IIITM Gwalior,
+                      India. </td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Bhanu Chander, and Kumaravelan Gopalakrishnan. "A secured and lightweight RFID-tag based
+                      authentication protocol with privacy-preserving in Telecare medicine information system."
+                      Computer Communications (2022). Elsevier, SCI, https://doi.org/10.1016/j.comcom.2022.05.002.
+                      (SCI Indexed) </td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Bhanu Chander, and Gopalakrishnan Kumaravelan. "An Improved 2-Factor Authentication Scheme for
+                      WSN Based on ECC." IETE Technical Review (2022): 1-12. SCI,
+                      https://doi.org/10.1080/02564602.2022.2055671. (SCI Indexed) </td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Chander, B. (2022). ECC-Based Secure and Efficient Authentication for Edge Devices and Cloud
+                      Server with Session Key Establishment. In Proceedings of International Conference on Information
+                      Technology and Applications (pp. 133-143). Springer, Singapore.</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Panchami V, Arjun Rajasekharan and Mahima Mary Mathews, (2022), “A Lightweight Image
+                      Cryptosystem for Multimedia Internet of Things”, Springer- Engineering Cyber-Physical Systems
+                      and Critical Infrastructures. https://www.springer.com/series/16845 (Scopus Indexed) </td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>Mohamed Amine Garrach, Chetan Waghela, Mahima Mary Mathews and Sreekuttan L S, (2022),
+                      “Benchmarking Post-Quantum Lattice based PKE/KEM schemes”, International Conference on Trends in
+                      Quantum Computing and Emerging Business Technologies 2022 (TQCEBT 2022), organized by CHRIST
+                      (Deemed to be University) Pune Lavasa campus.
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>Manjith, B. C., and R. Dhanalakshmi. (2021) "Enabling self-adaptability of small scale and
+                      large scale security systems using dynamic partial reconfiguration." Journal of Ambient
+                      Intelligence and Humanized Computing 12.10 (2021): 9387-9403.
+                      https://doi.org/10.1007/s12652-020-02658-9
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>Mahima Mary Mathews and Panchami.V, (2021) “Strengthening security of Mobile, IOT and Edge
+                      applications in the Post-Quantum era using QRNGs” is accepted for oral presentation at the
+                      ICICNIS 2021: 2nd International Conference on IoT Based Control Networks and Intelligent Systems
+                      to be held in Kerala, India during 28-29, June 2021. (published in ELSEVIER-SSRN Digital
+                      Library) http://dx.doi.org/10.2139/ssrn.3882506
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>Ashly Joseph and Panchami. V, (2021) “An Analysis on Low Cost and Performance of Hardware and
+                      Software Oriented Lightweight Block Ciphers for IoT Applications” is accepted for oral
+                      presentation at the ICICNIS 2021: 2nd International Conference on IoT Based Control Networks and
+                      Intelligent Systems to be held in Kerala, India during 28-29, June 2021. (published in
+                      ELSEVIER-SSRN Digital Library), http://dx.doi.org/10.2139/ssrn.388332
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <td>Keerthi Sreenivas konjety, V. Panchami, Vangapandu Sandeep, Sai Manoj konidana, (2021) “IoT
+                      based Smart Medicine Reminder Kit” presented the research article on ACM/CSI/IEEE CS Research &
+                      Industry Symposium which was held in honor of Shri. F.C. Kohli, the Father of Software Industry,
+                      at AIC-IIITKottayam Foundation, IIITKottayam Kerala, India on 3.5.2021.</td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>Sai Surya Kiran Pokala, Panchami. V, Sandeep Kumar Yedla (2020), “A Low Cost IoT Enabled
+                      Device for Real Time Air Quality Monitoring System”, Advances in Intelligent Systems and
+                      Computing, vol 1056. pp 329-338, Springer, Singapore.
+                      https://doi.org/10.1007/978-981-15-8289-9_8 (Scopus Indexed)</td>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <td>Sandeep Kumar Yedla, V. M. Manikandan, Panchami V. (2020) “Real – time Scene Change Detection
+                      with Object Detection for Automated Stock Verification”, 5th IEEE International Conference on
+                      Devices, Circuits and Systems (ICDCS'2020) , IEEE, 2020, DOI: 10.1109/ICDCS48716.2020.243571
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>
+                      Manjith, B. C., and R. Dhanalakshmi. (2020) “A framework for data and device protection on
+                      mobile devices using logic encryption” International Journal of Business Information Systems.
+                      10.1504/IJBIS.2020.10035043
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>Vemulapalli Rajesh, Panchami V (2019) “A Novel Multiplicative Substitution Cryptosystem”, IEEE
+                      International Conference “Electrical, Computer and Communication Technologies (ICECCT), IEEE
+                      2019, DOI: 10.1109/ICECCT.2019.8869508
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>
+                      Bhanu chander, Guravaiah, kumnarvelan, Anoop B N. Handbook of AI-based Models in Healthcare and
+                      Medicine: Approaches, Theories, and Applications.” Part of Book series: Artificial Intelligence
+                      in Smart Healthcare Systems. Taylor and Francis, CRC press. 2023
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>Bhanu chander, Guravaiah, kumnarvelan, Anoop B N. Intelligent Wireless Sensor Networks and the
+                      Internet of Things: Algorithms, Methodologies, and Applications. Part of Book series: Artificial
+                      Intelligence in Smart Healthcare Systems. Taylor and Francis, CRC press. 2023 </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Funded Projects accordion -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Funded Projects
+            <h3>Funded Projects</h3>
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -940,7 +1047,7 @@
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Consultancy Works
+            <h3>Consultancy Works</h3>
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -999,360 +1106,261 @@
           </div>
         </div>
       </div>
-    </div>
 
 
 
-
-    <!-- Research Publications -->
-    <div class="conatiner-fluid container-md mt-4">
-      <h1 class="display-5 text-center" id="R2">Research Talks & Publications</h1>
-      <div class="accordion mt-3" id="accordionExample">
-        <!-- Research Publications accordion -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
-              Research Publications
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="table-responsive">
-                <table class="table table-striped table-hover align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <td>Vishnu Ajith, Mahima Mary Mathews and Panchami V, (2022) ” Frequency Analysis on Caesar Cypher
-                        using Quantum State Vector Machine '', IEEE IATMSI- 2022, organized by ABV- IIITM Gwalior,
-                        India. </td>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <td>Bhanu Chander, and Kumaravelan Gopalakrishnan. "A secured and lightweight RFID-tag based
-                        authentication protocol with privacy-preserving in Telecare medicine information system."
-                        Computer Communications (2022). Elsevier, SCI, https://doi.org/10.1016/j.comcom.2022.05.002.
-                        (SCI Indexed) </td>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <td>Bhanu Chander, and Gopalakrishnan Kumaravelan. "An Improved 2-Factor Authentication Scheme for
-                        WSN Based on ECC." IETE Technical Review (2022): 1-12. SCI,
-                        https://doi.org/10.1080/02564602.2022.2055671. (SCI Indexed) </td>
-                    </tr>
-                    <tr>
-                      <th>4</th>
-                      <td>Chander, B. (2022). ECC-Based Secure and Efficient Authentication for Edge Devices and Cloud
-                        Server with Session Key Establishment. In Proceedings of International Conference on Information
-                        Technology and Applications (pp. 133-143). Springer, Singapore.</td>
-                    </tr>
-                    <tr>
-                      <th>5</th>
-                      <td>Panchami V, Arjun Rajasekharan and Mahima Mary Mathews, (2022), “A Lightweight Image
-                        Cryptosystem for Multimedia Internet of Things”, Springer- Engineering Cyber-Physical Systems
-                        and Critical Infrastructures. https://www.springer.com/series/16845 (Scopus Indexed) </td>
-                    </tr>
-                    <tr>
-                      <th>6</th>
-                      <td>Mohamed Amine Garrach, Chetan Waghela, Mahima Mary Mathews and Sreekuttan L S, (2022),
-                        “Benchmarking Post-Quantum Lattice based PKE/KEM schemes”, International Conference on Trends in
-                        Quantum Computing and Emerging Business Technologies 2022 (TQCEBT 2022), organized by CHRIST
-                        (Deemed to be University) Pune Lavasa campus.
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>7</th>
-                      <td>Manjith, B. C., and R. Dhanalakshmi. (2021) "Enabling self-adaptability of small scale and
-                        large scale security systems using dynamic partial reconfiguration." Journal of Ambient
-                        Intelligence and Humanized Computing 12.10 (2021): 9387-9403.
-                        https://doi.org/10.1007/s12652-020-02658-9
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>8</th>
-                      <td>Mahima Mary Mathews and Panchami.V, (2021) “Strengthening security of Mobile, IOT and Edge
-                        applications in the Post-Quantum era using QRNGs” is accepted for oral presentation at the
-                        ICICNIS 2021: 2nd International Conference on IoT Based Control Networks and Intelligent Systems
-                        to be held in Kerala, India during 28-29, June 2021. (published in ELSEVIER-SSRN Digital
-                        Library) http://dx.doi.org/10.2139/ssrn.3882506
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>9</th>
-                      <td>Ashly Joseph and Panchami. V, (2021) “An Analysis on Low Cost and Performance of Hardware and
-                        Software Oriented Lightweight Block Ciphers for IoT Applications” is accepted for oral
-                        presentation at the ICICNIS 2021: 2nd International Conference on IoT Based Control Networks and
-                        Intelligent Systems to be held in Kerala, India during 28-29, June 2021. (published in
-                        ELSEVIER-SSRN Digital Library), http://dx.doi.org/10.2139/ssrn.388332
-                    </tr>
-                    <tr>
-                      <th>10</th>
-                      <td>Keerthi Sreenivas konjety, V. Panchami, Vangapandu Sandeep, Sai Manoj konidana, (2021) “IoT
-                        based Smart Medicine Reminder Kit” presented the research article on ACM/CSI/IEEE CS Research &
-                        Industry Symposium which was held in honor of Shri. F.C. Kohli, the Father of Software Industry,
-                        at AIC-IIITKottayam Foundation, IIITKottayam Kerala, India on 3.5.2021.</td>
-                    </tr>
-                    <tr>
-                      <th>11</th>
-                      <td>Sai Surya Kiran Pokala, Panchami. V, Sandeep Kumar Yedla (2020), “A Low Cost IoT Enabled
-                        Device for Real Time Air Quality Monitoring System”, Advances in Intelligent Systems and
-                        Computing, vol 1056. pp 329-338, Springer, Singapore.
-                        https://doi.org/10.1007/978-981-15-8289-9_8 (Scopus Indexed)</td>
-                    </tr>
-                    <tr>
-                      <th>12</th>
-                      <td>Sandeep Kumar Yedla, V. M. Manikandan, Panchami V. (2020) “Real – time Scene Change Detection
-                        with Object Detection for Automated Stock Verification”, 5th IEEE International Conference on
-                        Devices, Circuits and Systems (ICDCS'2020) , IEEE, 2020, DOI: 10.1109/ICDCS48716.2020.243571
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>13</th>
-                      <td>
-                        Manjith, B. C., and R. Dhanalakshmi. (2020) “A framework for data and device protection on
-                        mobile devices using logic encryption” International Journal of Business Information Systems.
-                        10.1504/IJBIS.2020.10035043
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>14</th>
-                      <td>Vemulapalli Rajesh, Panchami V (2019) “A Novel Multiplicative Substitution Cryptosystem”, IEEE
-                        International Conference “Electrical, Computer and Communication Technologies (ICECCT), IEEE
-                        2019, DOI: 10.1109/ICECCT.2019.8869508
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>15</th>
-                      <td>
-                        Bhanu chander, Guravaiah, kumnarvelan, Anoop B N. Handbook of AI-based Models in Healthcare and
-                        Medicine: Approaches, Theories, and Applications.” Part of Book series: Artificial Intelligence
-                        in Smart Healthcare Systems. Taylor and Francis, CRC press. 2023
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>16</th>
-                      <td>Bhanu chander, Guravaiah, kumnarvelan, Anoop B N. Intelligent Wireless Sensor Networks and the
-                        Internet of Things: Algorithms, Methodologies, and Applications. Part of Book series: Artificial
-                        Intelligence in Smart Healthcare Systems. Taylor and Francis, CRC press. 2023 </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Research Talks Accordion -->
-        <div class="accordion-item ">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Research Talks
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <div class="table-responsive">
-                <table class="table table-striped table-hover align-middle">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <td>Dr. Lavanya, Delivered a lecture on “Artificial Intelligence for Social Media Content
-                        Extraction, Analysis and Recommendation Systems, as a part of GAIN course held by the department
-                        of Computer Applications, NIT Tiruchirappalli on 21 April 2022.</td>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <td>Dr. Panchami V, Delivered a talk as a keynote speaker for the National Conference on “The
-                        Recent Advances in Digital Transformation of Agriculture, Science and Environment (RADTASE
-                        2022)” held on 4th April 2022, organized by Department of Computer Science and Engineering, LBS
-                        Institute of Technology for Women, Trivandrum.</td>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <td>Dr. Panchami V, Deliveres an Expert Lecturer on ‘Blockchain Technology’ on 22nd December, 2021
-                        in Five-days Online Faculty Development Program on “Cyber Security and Blockchain Technology
-                        (CSBT-2021)” (20-24 December, 2021) organized by Department of Computer Science and Engineering,
-                        IIIT Bhagalpur</td>
-                    </tr>
-                    <tr>
-                      <th>4</th>
-                      <td>Dr. Panchami V, Delivered a talk on “IoT Security” organized by Amal Jyothi College of
-                        Engineering as part of KTU sponsored 3-day FDP. September 01-03, 2021. (Date: 03/09/2021 )</td>
-                    </tr>
-                    <tr>
-                      <th>5</th>
-                      <td>Dr. Panchami V, Delivered a talk on “IoT Security: Lightweight Cryptography” organized by
-                        College of Engineering karunagappally as part of AICTE sponsored 5-day STTP on Big Data and
-                        Security. March 22-26, 2021. (Date: 25/03/2021 )</td>
-                    </tr>
-                    <tr>
-                      <th>6</th>
-                      <td>Dr. Panchami V, Delivered a talk on “Introduction to Blockchain Technology and its
-                        Applications '' organized by College of Engineering karunagappally as part of AICTE sponsored
-                        5-day STTP on Big Data and Security. March 22-26, 2021 (Date: 23/03/2021)</td>
-                    </tr>
-                    <tr>
-                      <th>7</th>
-                      <td>Dr. Panchami V, Delivered a talk on “ Introduction to IoT and Design of IoT systems” TEQIP-II
-                        sponsored 6- days FDP on “ Applications of Artificial Intelligence and IoT in Engineering
-                        organised by department of Computer Science and Engineering at College of Engineering, Perumon,
-                        February 01-06, 2021 (Date: 05/02/2021)</td>
-                    </tr>
-                    <tr>
-                      <th>8</th>
-                      <td>Dr. Panchami V, Delivered a talk on” Block chain Technology” AICTE sponsored Six days STTP on
-                        Emerging Trends in Cryptography and its Applications in Cyber Security organised by the
-                        department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
-                        1- 14-12-2020 to 19-12-2020) (Date: 16/12/2020)</td>
-                    </tr>
-                    <tr>
-                      <th>9</th>
-                      <td>Dr. Panchami V, Delivered a talk on” Block chain and its Applications” AICTE sponsored Six
-                        days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organised by
-                        the department of Computer Science and Engineering at Vidya Academy of Science and Technology.
-                        (TERM 2- 21-12-2020 to 28-12-2020) (Date: 23/12/2020)</td>
-                    </tr>
-                    <tr>
-                      <th>10</th>
-                      <td>Dr. Panchami V, Delivered a talk on” Block chain and Bitcoin” AICTE sponsored Six days STTP on
-                        Emerging Trends in Cryptography and its Applications in Cyber Security organized by the
-                        department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
-                        3- 1-2-2021 to 06-02-2021) (Date: 3/02/2021)</td>
-                    </tr>
-                    <tr>
-                      <th>11</th>
-                      <td>Dr. Panchami V, Delivered a lecture on IoT security organized by Department Electronic and
-                        Communication Engineering, Sree Chitra Thirunal College of Engineering, Thiruvananthapuram,
-                        Kerala on 23rd July 2019 in AICTE sponsored Faculty Development Program (FDP) on Internet of
-                        Things. (Date: 23/07/2019)</td>
-                    </tr>
-                    <tr>
-                      <th>12</th>
-                      <td>Ms. Mahima Mary Mathews delivered a lecture on Quantum Cryptography and its application in
-                        Cyber security in the webinar organized by Quantum Computing Knowledge Club, SITAICS, Rashtriya
-                        Raksha University, National Security and Police University of India, Gujarat. (18-Jan-2022)</td>
-                    </tr>
-                    <tr>
-                      <th>13</th>
-                      <td>Ms. Mahima Mary Mathews delivered a talk on Cyber Security in Cyber era in the seminar
-                        conducted as part of “Ente Keralam”-2nd tenure 1st anniversary celebration of Kerala State
-                        Government hosted by Cybercell, Alappuzha. (16-May-2022)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+      <!-- Research Talks -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h3>Invited Talks</h3>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Details</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td>Dr. Lavanya, Delivered a lecture on “Artificial Intelligence for Social Media Content
+                      Extraction, Analysis and Recommendation Systems, as a part of GAIN course held by the department
+                      of Computer Applications, NIT Tiruchirappalli on 21 April 2022.</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Dr. Panchami V, Delivered a talk as a keynote speaker for the National Conference on “The
+                      Recent Advances in Digital Transformation of Agriculture, Science and Environment (RADTASE
+                      2022)” held on 4th April 2022, organized by Department of Computer Science and Engineering, LBS
+                      Institute of Technology for Women, Trivandrum.</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>Dr. Panchami V, Deliveres an Expert Lecturer on ‘Blockchain Technology’ on 22nd December, 2021
+                      in Five-days Online Faculty Development Program on “Cyber Security and Blockchain Technology
+                      (CSBT-2021)” (20-24 December, 2021) organized by Department of Computer Science and Engineering,
+                      IIIT Bhagalpur</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>Dr. Panchami V, Delivered a talk on “IoT Security” organized by Amal Jyothi College of
+                      Engineering as part of KTU sponsored 3-day FDP. September 01-03, 2021. (Date: 03/09/2021 )</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>Dr. Panchami V, Delivered a talk on “IoT Security: Lightweight Cryptography” organized by
+                      College of Engineering karunagappally as part of AICTE sponsored 5-day STTP on Big Data and
+                      Security. March 22-26, 2021. (Date: 25/03/2021 )</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>Dr. Panchami V, Delivered a talk on “Introduction to Blockchain Technology and its
+                      Applications '' organized by College of Engineering karunagappally as part of AICTE sponsored
+                      5-day STTP on Big Data and Security. March 22-26, 2021 (Date: 23/03/2021)</td>
+                  </tr>
+                  <tr>
+                    <th>7</th>
+                    <td>Dr. Panchami V, Delivered a talk on “ Introduction to IoT and Design of IoT systems” TEQIP-II
+                      sponsored 6- days FDP on “ Applications of Artificial Intelligence and IoT in Engineering
+                      organised by department of Computer Science and Engineering at College of Engineering, Perumon,
+                      February 01-06, 2021 (Date: 05/02/2021)</td>
+                  </tr>
+                  <tr>
+                    <th>8</th>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain Technology” AICTE sponsored Six days STTP on
+                      Emerging Trends in Cryptography and its Applications in Cyber Security organised by the
+                      department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
+                      1- 14-12-2020 to 19-12-2020) (Date: 16/12/2020)</td>
+                  </tr>
+                  <tr>
+                    <th>9</th>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain and its Applications” AICTE sponsored Six
+                      days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organised by
+                      the department of Computer Science and Engineering at Vidya Academy of Science and Technology.
+                      (TERM 2- 21-12-2020 to 28-12-2020) (Date: 23/12/2020)</td>
+                  </tr>
+                  <tr>
+                    <th>10</th>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain and Bitcoin” AICTE sponsored Six days STTP on
+                      Emerging Trends in Cryptography and its Applications in Cyber Security organized by the
+                      department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
+                      3- 1-2-2021 to 06-02-2021) (Date: 3/02/2021)</td>
+                  </tr>
+                  <tr>
+                    <th>11</th>
+                    <td>Dr. Panchami V, Delivered a lecture on IoT security organized by Department Electronic and
+                      Communication Engineering, Sree Chitra Thirunal College of Engineering, Thiruvananthapuram,
+                      Kerala on 23rd July 2019 in AICTE sponsored Faculty Development Program (FDP) on Internet of
+                      Things. (Date: 23/07/2019)</td>
+                  </tr>
+                  <tr>
+                    <th>12</th>
+                    <td>Ms. Mahima Mary Mathews delivered a lecture on Quantum Cryptography and its application in
+                      Cyber security in the webinar organized by Quantum Computing Knowledge Club, SITAICS, Rashtriya
+                      Raksha University, National Security and Police University of India, Gujarat. (18-Jan-2022)</td>
+                  </tr>
+                  <tr>
+                    <th>13</th>
+                    <td>Ms. Mahima Mary Mathews delivered a talk on Cyber Security in Cyber era in the seminar
+                      conducted as part of “Ente Keralam”-2nd tenure 1st anniversary celebration of Kerala State
+                      Government hosted by Cybercell, Alappuzha. (16-May-2022)</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <!-- Events Organised -->
 
 
+  <!-- Gallery -->
+  <div id="gal" class="" style="padding-top: 50px;">
+    <br>
+    <div class="" style="background-color:#ffd9d9; border: groove #65a7bc 10px; width:auto; min-height: 500px;">
+      <h1 class="text-center"> Gallery</h1><br>
+      <!-- <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="images/dpic.jpg">
+            <img src="./assets/images/carousel/carousel1.jpg" alt="Cinque Terre" width="100%" height="400">
+          </a>
+          <div class="desc">Description</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a target="_blank" href="">
+            <img src="./assets/images/clabslogoNew.png" alt="Forest" width="auto" height="auto">
+          </a>
+          <div class="desc">Description</div>
+        </div>
+      </div> -->
+    </div>
+    <br>
+  </div>
 
-
-    <!-- Events Organised -->
-
-    <!-- Contact Us -->
-    <footer class="footer mt-5">
-      <div class="container" id="Contact" style="background-color:#e3f2fd;">
-        <div class="row">
-          <div class="col-4 col-sm-2 align-self-center">
-
-            <div class="row mt-3 justify-content-center">
-              <a href="https://www.iiitkottayam.ac.in/#!/home" target="_blank">
-                <div class="col"><img src="./assets/images/iiitklogo.png" class="w-100 " alt=""></div>
-              </a>
-            </div>
-            <div class="row mt-3 justify-content-center">
-              <div class="col"><img src="./assets/images/clabslogoNew.png" class="w-100 " alt=""></div>
-            </div>
-
+  <!-- Contact Us -->
+  <footer class="footer mt-3">
+    <div id="Contact" style="background-color:#e3f2fd;">
+      <div class="row">
+        <div class="col-4 col-sm-2 align-self-center">
+          <div class="row mt-3 justify-content-center">
+            <a href="https://www.iiitkottayam.ac.in/#!/home" target="_blank">
+              <div class="col"><img src="./assets/images/iiitklogo.png" class="w-100 " alt=""></div>
+            </a>
           </div>
-          <div class="col-8 col-sm-5">
-            <h5>Our Address</h5>
-            <address class="address">
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#394b59" class="bi bi-pin-map-fill"
-                  viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
-                  <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
-                </svg>
-                CyberLabs,Indian Institute of Information Technology Kottayam Valavoor.P.O,
-                Pala,
-                Kottayam-686635,
-                Kerala,
-                India
-              </p>
-              <p>
+          <div class="row mt-3 justify-content-center">
+            <div class="col"><img src="./assets/images/clabslogoNew.png" class="w-100 " alt=""></div>
+          </div>
+
+        </div>
+        <div class="col-8 col-sm-5 offset-sm-1">
+          <h5>Our Address</h5>
+          <address class="address">
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#394b59" class="bi bi-pin-map-fill"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z" />
+                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+              </svg>
+              CyberLabs,Indian Institute of Information Technology Kottayam Valavoor.P.O,
+              Pala,
+              Kottayam-686635,
+              Kerala,
+              India
+            </p>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#394b59" class="bi bi-telephone-fill"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg> +91-0482-2202135
+            </p>
+            <p>
+              <a href="mailto:cyberlabs@iiitkottayam.ac.in">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#394b59"
-                  class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                </svg> +91-0482-2202135
-              </p>
-              <p>
-                <a href="mailto:cyberlabs@iiitkottayam.ac.in">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#394b59"
-                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
-                  </svg></a> cyberlabs@iiitkottayam.ac.in
-              </p>
-            </address>
-          </div>
-          <div class="col-12 col-sm-4 text-center align-self-center">
-            <a href="https://in.linkedin.com/company/cyberlabs-iiitkottayam" style="text-decoration: none;"
-              target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-linkedin"
-                viewBox="0 0 16 16">
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-              </svg>
-            </a>
-            <a href="" style="text-decoration: none;" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-twitter"
-                viewBox="0 0 16 16">
-                <path
-                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-              </svg>
-            </a>
-            <a href="" style="text-decoration: none;" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-youtube"
-                viewBox="0 0 16 16">
-                <path
-                  d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
-              </svg>
-            </a>
-          </div>
+                  class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                </svg></a> cyberlabs@iiitkottayam.ac.in
+            </p>
+          </address>
         </div>
-        <div class="row justify-content-center mt-2">
-          <div class="col-auto">
-            <p>©Copyright 2022 - CyberLabs, IIIT Kottayam. All rights reserved.</p>
-          </div>
+        <div class="col-12 col-sm-4 text-center align-self-center">
+          <a href="https://in.linkedin.com/company/cyberlabs-iiitkottayam" style="text-decoration: none;"
+            target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-linkedin"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </svg>
+          </a>
+          <a href="" style="text-decoration: none;" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-twitter"
+              viewBox="0 0 16 16">
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </svg>
+          </a>
+          <a href="" style="text-decoration: none;" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#394b59" class="bi bi-youtube"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+            </svg>
+          </a>
         </div>
       </div>
-    </footer>
+      <div class="row justify-content-center mt-2">
+        <div class="col-auto">
+          <p>©Copyright 2022 - CyberLabs, IIIT Kottayam. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <script>
+    var i = 0;
+    var j = 0;
+    var txt = "Welcome To CyberLabs : The research group of CSE- Cyber Security IIIT Kottayam";
+    var txt = "Welcome To CyberLabs : The research group of CSE- Cyber Security IIIT Kottayam";
+    var speed = 50;
+    var speed2 = 75;
+    function start(){
+      typeWriter();
+      typeWriter2();
+    }
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("CLintro").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    function typeWriter2() {
+      if (j < txt.length) {
+        document.getElementById("CLintro2").innerHTML += txt.charAt(j);
+        j++;
+        setTimeout(typeWriter2, speed2);
+      }
+    }
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./JS/main.js"></script>
 </body>
 
 </html>
