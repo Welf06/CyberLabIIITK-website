@@ -1,3 +1,18 @@
+#font-hel{
+  font-family: Helvetica;
+}
+
+#introCL{
+  
+  text-shadow: 2px 2px 2px 
+  #9cc1d3;
+  font-family: "Sofia", cursive;
+  font-size: 30px;
+}
+#introCL2{
+  font-family: "Sofia", cursive;
+      font-size: 25px;
+}
 canvas {
     position: absolute;
     top: 0;
@@ -6,13 +21,28 @@ canvas {
     height:600px;
     width: 100%;
   }
+#navbarpicture{
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
 .navbar-nav .nav-link{
+  font-size: large;
   color: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .nav-link:hover{
-    text-decoration:underline 2px rgb(255, 255, 255);
-    text-shadow: 1px 1px 5px white;
+    /* text-decoration:underline 2px rgb(255, 255, 255); */
+    text-shadow:
+    0 0 0px #fff,
+    0 0 0px #fff,
+    0 0 0px #fff,
+    0 0 1px rgb(255, 255, 255),
+    0 0 1px rgb(255, 255, 255),
+    0 0 1px rgb(255, 255, 255),
+    0 0 1px rgb(255, 255, 255),
+    0 0 1px rgb(255, 255, 255);
 }
 #navbar-toggler{
   border-color: white;
@@ -23,7 +53,6 @@ canvas {
   top: 8rem;
   left: 0;
   right: 0;
-  
   z-index: -1;
   height: 500px;
   width: 100%;
@@ -31,9 +60,10 @@ canvas {
 #CLintro2{
   position: absolute;
   top: 8rem;
+  bottom: 0;
   left: 0;
   right: 0;
-  
+  margin: auto;
   z-index: -1;
   height: 500px;
   width: 100%;

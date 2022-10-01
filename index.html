@@ -5,47 +5,59 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyberlabs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
   <link rel="stylesheet" href="./CSS/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body style="background-color: #ffffff;" onload="start()">
-  <canvas id=c></canvas>
+  <div class="navbar-pic w-100" id="navbarpicture">
+    <img src="./assets/images/carousel/img12.jpeg" width="100%" height="500px" alt="">
+  </div>
+  <!-- <canvas id=c></canvas> -->
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="home">
-    <div class="container-fluid ">      
-      <a class="navbar-brand" href="#">
-        <img class="img-thumbnail" src=./assets/images/clabslogoNew.png alt="" width="80rem" >
+  <nav class="navbar navbar-dark navbar-expand-md bg-transparent " >
+    <div class="container-fluid" style="padding-right: 0;">      
+      <a class="navbar-brand float-right d-block " href="#">
+        <img class="" src=./assets/images/clabslogoNew.png alt="" width="80rem" >
       </a>
       <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
-        <ul class="navbar-nav d-flex w-100 justify-content-center bg-dark ">
-          <!-- <li class="nav-item">
+      <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+        <ul class="navbar-nav d-flex w-100 justify-content-center bg-transparent ">
+          <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#P1">People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#R1">Publications</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              Research
+              Projects
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <!-- <li><a class="dropdown-item" href="#R1">Research Areas</a></li> -->
-              <li><a class="dropdown-item" href="#R1">Research Publications</a></li>
-              <li><a class="dropdown-item" href="#R1">Research Talks</a></li>
+              <li><a class="dropdown-item" href="#R1">Funded Projects</a></li>
+              <li><a class="dropdown-item" href="#R1">Consultancy Projects</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#R1">Funded Projects</a>
+            <a class="nav-link" aria-current="page" href="#R1">Invited Talks</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#R1">Funded Projects/Consultancy works</a>
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#R1">Consultancy works</a>
-          </li>
+          </li> -->
           <li class="nav-item">
-            <a class="nav-link" href="#eve">Events Organised</a>
+            <a class="nav-link" href="#eve">Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#gal">Gallery</a>
@@ -55,8 +67,8 @@
           </li>
         </ul>
       </div>
-      <a class="navbar-brand d-none d-lg-block" href="#">
-        <img class="img-thumbnail" src="assets/images/iiitklogo.png" alt="" width="150" height="80">
+      <a class="navbar-brand d-none d-md-flex ml-auto" href="#">
+        <img class="" src="assets/images/iiitklogo.png" alt="" width="150" height="80">
       </a>
     </div>
     
@@ -64,20 +76,27 @@
   
 
   <!-- Intro to CyberLabs -->
-  <div class="container text-center neonText d-none d-md-block" id="CLintro" style="font-size: 50px;">
+  <!-- <div class="container text-center neonText d-none d-md-block" id="CLintro" style="font-size: 50px;">
     
   </div>
   <div class="container text-center align-middle neonText d-block d-md-none mx-auto" id="CLintro2" style="font-size:25px;">
     
-  </div>
-  
+  </div> -->
   <!-- People & Research Areas -->
-  <div class="container-lg-fluid container-lg" style="padding-top: 500px;">
-    
+  <div class="container-lg-fluid container-lg" style="padding-top: 380px;">
+    <div class="row" style="padding-bottom: 10px;">
+      <div class="col">
+        <div class="card" id="introCard">
+          <div class="card-body text-center " id="introCL" style="color: #262262;">
+            
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <h3 class="display-4 text-center mb-3" id="R1">People & Research Areas</h3> -->
-    <div class="row">
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+    <div class="row" style="padding-top: 20px;" id="P1">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -105,12 +124,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100">
-                  <h5 style="color: #262262;">Dr. Panchami. V</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr. Panchami. V</h5>
                 </div>
-                <small style="color: #262262;">Founder and CTO of CyberLabs IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Founder and CTO of CyberLabs IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -118,7 +137,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardOne">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardOne" aria-expanded="true" aria-controls="collapseCardOne">
                     Research Areas
                   </button>
@@ -140,8 +159,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -169,12 +188,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Ms. Mahima Mary Mathews</h5>
+                  <h5 style="color: #1d176a;">Ms. Mahima Mary Mathews</h5>
                 </div>
-                <small>Research Coordinator and Consultant, CyberLabs <br> Research Scholar, CSE, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Research Coordinator and Consultant, CyberLabs <br> Research Scholar, CSE, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -182,7 +201,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardTwo" aria-expanded="true" aria-controls="collapseCardTwo">
                     Research Areas
                   </button>
@@ -204,8 +223,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -234,12 +253,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
                   <h5>Dr.Manjith B.C.</h5>
                 </div>
-                <small>Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;"></small>Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -247,7 +266,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardThree" aria-expanded="true" aria-controls="collapseCardThree">
                     Research Areas
                   </button>
@@ -271,8 +290,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -331,8 +350,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -394,8 +413,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -459,8 +478,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -522,8 +541,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -584,8 +603,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -647,8 +666,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -710,8 +729,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -771,8 +790,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 my-2">
-        <div class="card text-dark mx-auto h-100" style="background-color:#b7dff3;">
+      <div class="col-md-4 my-2">
+        <div class="card text-dark mx-auto h-100" style="background-color:#d7edf8;">
           <div class="row">
             <div class="col-5  col-md-5">
               <div class="row">
@@ -1219,6 +1238,62 @@
           </div>
         </div>
       </div>
+
+
+      <!-- events -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <h3>Events</h3>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th>Upcoming Events</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Sponsored by </th>
+                    <th scope="col">Dates</th>
+                    <th scope="col">Organized by Faculty Member</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            
+            
+              <table class="table table-striped table-hover align-middle">
+                <thead>
+                  <tr>
+                    <th>Past Events</th>
+                  </tr>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Event</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Sponsored by </th>
+                    <th scope="col">Dates</th>
+                    <th scope="">Organized by Faculty Member</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Events Organised -->
@@ -1333,18 +1408,14 @@
   <!-- bootstrap -->
   <script>
     var i = 0;
-    var j = 0;
-    var txt = "Welcome To CyberLabs : The research group of CSE- Cyber Security IIIT Kottayam";
-    var txt = "Welcome To CyberLabs : The research group of CSE- Cyber Security IIIT Kottayam";
-    var speed = 50;
-    var speed2 = 75;
+    var txt = "The Cybersecurity Research Group, IIIT Kottayam.";
+    var speed = 75;
     function start(){
       typeWriter();
-      typeWriter2();
     }
     function typeWriter() {
       if (i < txt.length) {
-        document.getElementById("CLintro").innerHTML += txt.charAt(i);
+        document.getElementById("introCL").innerHTML += txt.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
