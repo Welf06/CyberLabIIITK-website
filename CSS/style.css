@@ -1,40 +1,55 @@
-#font-hel{
+#navbar-toggler{
+  z-index: 2;
+}
+#navbarNavDropdown{
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+#font-hel {
   font-family: Helvetica;
 }
 
-#introCL{
-  
-  text-shadow: 2px 2px 2px 
-  #9cc1d3;
+#introCL {
+
+  text-shadow: 2px 2px 2px #9cc1d3;
   font-family: "Sofia", cursive;
   font-size: 30px;
 }
-#introCL2{
+
+#introCL2 {
   font-family: "Sofia", cursive;
-      font-size: 25px;
+  font-size: 25px;
 }
+
 canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    height:600px;
-    width: 100%;
-  }
-#navbarpicture{
   position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  height: 600px;
+  width: 100%;
 }
-.navbar-nav .nav-link{
+
+#navbarpicture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.navbar-nav .nav-link {
   font-size: large;
   color: white;
   transition: all 0.2s ease-in-out;
 }
-.nav-link:hover{
-    /* text-decoration:underline 2px rgb(255, 255, 255); */
-    text-shadow:
+
+.nav-link:hover {
+  /* text-decoration:underline 2px rgb(255, 255, 255); */
+  text-shadow:
     0 0 0px #fff,
     0 0 0px #fff,
     0 0 0px #fff,
@@ -44,11 +59,12 @@ canvas {
     0 0 1px rgb(255, 255, 255),
     0 0 1px rgb(255, 255, 255);
 }
-#navbar-toggler{
+
+#navbar-toggler {
   border-color: white;
 }
 
-#CLintro{
+#CLintro {
   position: absolute;
   top: 8rem;
   left: 0;
@@ -57,7 +73,8 @@ canvas {
   height: 500px;
   width: 100%;
 }
-#CLintro2{
+
+#CLintro2 {
   position: absolute;
   top: 8rem;
   bottom: 0;
@@ -68,6 +85,7 @@ canvas {
   height: 500px;
   width: 100%;
 }
+
 .neonText {
   color: rgb(255, 255, 255);
   text-shadow:

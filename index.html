@@ -12,22 +12,25 @@
 </head>
 
 <body style="background-color: #ffffff;" onload="start()">
-  <div class="navbar-pic w-100" id="navbarpicture">
-    <img src="./assets/images/carousel/img12.jpeg" width="100%" height="500px" alt="">
+  <div class="navbar-pic d-none d-md-block w-100" id="navbarpicture">
+    <img class="img-responsive" src="./assets/images/carousel/img12.jpeg" width="100%" height="500px" alt="">
+  </div>
+  <div class="navbar-pic d-block d-md-none w-100" id="navbarpicture">
+    <img class="img-responsive" src="./assets/images/carousel/img13.jpeg" width="100%" height="500px" alt="">
   </div>
   <!-- <canvas id=c></canvas> -->
   <!-- navbar -->
-  <nav class="navbar navbar-dark navbar-expand-md bg-transparent " >
+  <nav class="navbar navbar-dark navbar-expand-md bg-transparent" >
     <div class="container-fluid" style="padding-right: 0;">      
       <a class="navbar-brand float-right d-block " href="#">
-        <img class="" src=./assets/images/clabslogoNew.png alt="" width="80rem" >
+        <img class="" src=./assets/images/clabslogoNew.png alt="" width="80" >
       </a>
       <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
-        <ul class="navbar-nav d-flex w-100 justify-content-center bg-transparent ">
+      <div class="collapse navbar-collapse text-center position-absolute my-5 justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav d-flex w-100 justify-content-center bg-transparent mx-auto">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
@@ -35,40 +38,34 @@
             <a class="nav-link" aria-current="page" href="#P1">People</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#R1">Publications</a>
+            <a class="nav-link" aria-current="page" href="#R1"> Publications</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               Projects
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#R1">Funded Projects</a></li>
-              <li><a class="dropdown-item" href="#R1">Consultancy Projects</a></li>
+              <li><a class="dropdown-item" href="#PR1">Funded Projects</a></li>
+              <li><a class="dropdown-item" href="#PR2">Consultancy Projects</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#R1">Invited Talks</a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#R1">Funded Projects/Consultancy works</a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#R1">Consultancy works</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="#eve">Events</a>
+            <a class="nav-link" aria-current="page" href="#I1">Invited Talks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gal">Gallery</a>
+            <a class="nav-link" href="#E1">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Contact">Contact Us</a>
+            <a class="nav-link" href="#G1">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#C1">Contact Us</a>
           </li>
         </ul>
       </div>
       <a class="navbar-brand d-none d-md-flex ml-auto" href="#">
-        <img class="" src="assets/images/iiitklogo.png" alt="" width="150" height="80">
+        <img class="" src="assets/images/iiitklogo.png" alt="" width="120" height="80">
       </a>
     </div>
     
@@ -191,7 +188,7 @@
             <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5 style="color: #1d176a;">Ms. Mahima Mary Mathews</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Ms. Mahima Mary Mathews</h5>
                 </div>
                 <small style="color: #0cbfe9;">Research Coordinator and Consultant, CyberLabs <br> Research Scholar, CSE, IIIT Kottayam</small>
               </ul>
@@ -256,9 +253,9 @@
             <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Dr.Manjith B.C.</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr.Manjith B.C.</h5>
                 </div>
-                <small style="color: #0cbfe9;"></small>Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -318,12 +315,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Ms. Sharon Justine</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Ms. Sharon Justine</h5>
                 </div>
-                <small>Research Scholar, CSE, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Research Scholar, CSE, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -331,7 +328,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardFour" aria-expanded="true" aria-controls="collapseCardFour">
                     Research Areas
                   </button>
@@ -379,12 +376,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Dr. E.Silambarasan</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr. E.Silambarasan</h5>
                 </div>
-                <small>Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam.</small>
+                <small style="color: #0cbfe9;">Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam.</small>
               </ul>
             </div>
           </div>
@@ -392,7 +389,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardFive">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardFive" aria-expanded="true" aria-controls="collapseCardFive">
                     Research Areas
                   </button>
@@ -442,12 +439,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Dr. Bhanu chander</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr. Bhanu chander</h5>
                 </div>
-                <small>Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -455,7 +452,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardSix">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardSix" aria-expanded="true" aria-controls="collapseCardSix">
                     Research Areas
                   </button>
@@ -507,12 +504,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Dr. Lavanya Settipalli</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr. Lavanya Settipalli</h5>
                 </div>
-                <small>Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Assistant Professor <br>CSE- Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -520,7 +517,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardSeven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardSeven" aria-expanded="true" aria-controls="collapseCardSeven">
                     Research Areas
                   </button>
@@ -570,12 +567,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Dr. Amit Kumar Roy</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Dr. Amit Kumar Roy</h5>
                 </div>
-                <small>Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Assistant Professor <br> CSE-Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -583,7 +580,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardEleven">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardEleven" aria-expanded="true" aria-controls="collapseCardEleven">
                     Research Areas
                   </button>
@@ -632,12 +629,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Pratik Raj</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Pratik Raj</h5>
                 </div>
-                <small>Undergraduate Student, CSE, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Undergraduate Student, CSE, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -645,7 +642,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardTwelve">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardTwelve" aria-expanded="true" aria-controls="collapseCardTwelve">
                     Research Areas
                   </button>
@@ -695,12 +692,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Niranjan Nagumalli</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Niranjan Nagumalli</h5>
                 </div>
-                <small>Undergraduate Student, CSE, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Undergraduate Student, CSE, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -708,7 +705,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardEight">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardEight" aria-expanded="true" aria-controls="collapseCardEight">
                     Research Areas
                   </button>
@@ -758,12 +755,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Samhitha Bharthulwar</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Samhitha Bharthulwar</h5>
                 </div>
-                <small>Undergraduate Student, CSE - Cyber Security, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Undergraduate Student, CSE - Cyber Security, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -771,7 +768,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardNine">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardNine" aria-expanded="true" aria-controls="collapseCardNine">
                     Research Areas
                   </button>
@@ -818,12 +815,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-7 col-md-7">
+            <div class="col-7 col-md-7 my-auto my-md-2">
               <ul class="list-group text-center">
                 <div class="w-100 justify-content-center">
-                  <h5>Rohith Ninan</h5>
+                  <h5 id="font-hel" style="color: #1d176a;">Rohith Ninan</h5>
                 </div>
-                <small>Undergraduate Student, ECE, IIIT Kottayam</small>
+                <small style="color: #0cbfe9;">Undergraduate Student, ECE, IIIT Kottayam</small>
               </ul>
             </div>
           </div>
@@ -831,7 +828,7 @@
             <div class="accordion" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingCardTen">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  <button class="accordion-button collapsed" style="padding:12px;" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapseCardTen" aria-expanded="true" aria-controls="collapseCardTen">
                     Research Areas
                   </button>
@@ -855,12 +852,12 @@
 
 
   <!-- Accordion -->
-  <div class="conatiner-fluid container mt-5" id="R1">
+  <div style="background-color: rgb(182, 182, 182); padding: 20px ; border-radius: 5px; border: groove 2px rgb(150, 150, 150);">
+  <div class="conatiner-fluid container my-5" id="R1">
     <!-- <h1 class="display-5 text-center" id="F1">Funded Projects & Consultancy Works</h1> -->
     <div class="accordion mt-3" id="accordionExample">
-
       <!-- Research Publication -->
-      <div class="accordion-item">
+      <div class="accordion-item my-3" style="border:double #d0e6f0; border-width: 12px;">
         <h1 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -1000,7 +997,7 @@
         </div>
       </div>
       <!-- Funded Projects accordion -->
-      <div class="accordion-item">
+      <div class="accordion-item my-3" style="border:double #d0e6f0; border-width: 12px;" id="PR1">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -1017,19 +1014,19 @@
                     <th scope="col">#</th>
                     <th scope="col">Project Funding Agency</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Funding in Rs.</th>
+                    <th scope="col">Funding</th>
                     <th scope="col">PI/ Co-PI Involved</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Cymbient Technologies Pvt Ltd,
+                    <td>Cymbient Technologies Pvt Ltd, 
                       Gurgaon, Haryana, India.</td>
                     <td>A Quantum-safe Multi-Party
                       Threshold Signature Scheme for
                       Blockchain</td>
-                    <td>9,44,000</td>
+                    <td>9,44,000 INR</td>
                     <td>1. Dr Panchami V <br>
                       2. Ms. Mahima Mary Mathews</td>
                   </tr>
@@ -1037,7 +1034,7 @@
                     <th scope="row">2</th>
                     <td>IonQ Research Credits Program, USA</td>
                     <td>Post-Quantum Public Key Infrastructure</td>
-                    <td>10,00,000</td>
+                    <td>10,000 USD</td>
                     <td>1. Dr Panchami V <br>
                       2. Ms. Mahima Mary Mathews</td>
                   </tr>
@@ -1045,14 +1042,14 @@
                     <th scope="row">3</th>
                     <td>AICTE ATAL</td>
                     <td>Cyber Security and Digital Forensics</td>
-                    <td>93,000</td>
+                    <td>93,000 INR</td>
                     <td>Dr Panchami V</td>
                   </tr>
                   <tr>
                     <th scope="row">4</th>
                     <td>AICTE ATAL</td>
                     <td>Big Data Security and Analytics</td>
-                    <td>93,000</td>
+                    <td>93,000 INR</td>
                     <td>Dr Panchami V</td>
                   </tr>
                 </tbody>
@@ -1062,11 +1059,11 @@
         </div>
       </div>
       <!-- Consultancy Works accordion -->
-      <div class="accordion-item">
+      <div class="accordion-item my-3" style="border:double #d0e6f0; border-width: 12px;" id="PR2">
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <h3>Consultancy Works</h3>
+            <h3>Consultancy Projects</h3>
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -1128,8 +1125,8 @@
 
 
 
-      <!-- Research Talks -->
-      <div class="accordion-item">
+      <!-- Invited Talks -->
+      <div class="accordion-item my-3" style="border:double #d0e6f0; border-width: 12px;" id="I1">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -1150,87 +1147,68 @@
                 <tbody>
                   <tr>
                     <th>1</th>
-                    <td>Dr. Lavanya, Delivered a lecture on “Artificial Intelligence for Social Media Content
-                      Extraction, Analysis and Recommendation Systems, as a part of GAIN course held by the department
-                      of Computer Applications, NIT Tiruchirappalli on 21 April 2022.</td>
+                    <td>Dr Panchami V delivered a talk on “ Blockchain Technology and Cryptocurrency” on 5th September 2022, in the Five day National webinar on “Artificial Intelligence and its Multi-disciplinary Stances, organized by The Gandhigram Rural Institute, Ministry of Education, Government of India.</td>
                   </tr>
                   <tr>
                     <th>2</th>
-                    <td>Dr. Panchami V, Delivered a talk as a keynote speaker for the National Conference on “The
-                      Recent Advances in Digital Transformation of Agriculture, Science and Environment (RADTASE
-                      2022)” held on 4th April 2022, organized by Department of Computer Science and Engineering, LBS
-                      Institute of Technology for Women, Trivandrum.</td>
+                    <td>Dr. Panchami V, handled a session on 30th August 2022, “Introduction to IoT” in a KTU-sponsored FDP organized by TocH Institute of Science and Technology, Ernakulam</td>
                   </tr>
                   <tr>
                     <th>3</th>
-                    <td>Dr. Panchami V, Deliveres an Expert Lecturer on ‘Blockchain Technology’ on 22nd December, 2021
-                      in Five-days Online Faculty Development Program on “Cyber Security and Blockchain Technology
-                      (CSBT-2021)” (20-24 December, 2021) organized by Department of Computer Science and Engineering,
-                      IIIT Bhagalpur</td>
+                    <td>Dr Panchami V was the chief guest at the inaugural ceremony of the Computer Department Association and delivered a session on “Blockchain technology” on 24th August 2022, organized by Mar Augusthinose College, Ramapuram, Kerala. </td>
                   </tr>
                   <tr>
                     <th>4</th>
-                    <td>Dr. Panchami V, Delivered a talk on “IoT Security” organized by Amal Jyothi College of
-                      Engineering as part of KTU sponsored 3-day FDP. September 01-03, 2021. (Date: 03/09/2021 )</td>
+                    <td>Ms. Mahima Mary Mathews delivered a talk on Cyber Security in Cyber era in the seminar conducted as part of “Ente Keralam”-2nd tenure 1st anniversary celebration of Kerala State Government hosted by Cybercell, Alappuzha. (16-May-2022)</td>
                   </tr>
                   <tr>
                     <th>5</th>
-                    <td>Dr. Panchami V, Delivered a talk on “IoT Security: Lightweight Cryptography” organized by
-                      College of Engineering karunagappally as part of AICTE sponsored 5-day STTP on Big Data and
-                      Security. March 22-26, 2021. (Date: 25/03/2021 )</td>
+                    <td>Dr. Lavanya, Delivered a lecture on “Artificial Intelligence for Social Media Content Extraction, Analysis and Recommendation Systems, as a part of GAIN course held by the department of Computer Applications, NIT Tiruchirappalli on 21 April 2022.</td>
                   </tr>
                   <tr>
                     <th>6</th>
-                    <td>Dr. Panchami V, Delivered a talk on “Introduction to Blockchain Technology and its
-                      Applications '' organized by College of Engineering karunagappally as part of AICTE sponsored
-                      5-day STTP on Big Data and Security. March 22-26, 2021 (Date: 23/03/2021)</td>
+                    <td>Dr. Panchami V,  Delivered a talk as a keynote speaker for the National Conference on “The Recent Advances in Digital Transformation of Agriculture, Science and Environment (RADTASE 2022)” held on 4th April 2022, organized by Department of Computer Science and Engineering, LBS Institute of Technology for Women, Trivandrum.</td>
                   </tr>
                   <tr>
                     <th>7</th>
-                    <td>Dr. Panchami V, Delivered a talk on “ Introduction to IoT and Design of IoT systems” TEQIP-II
-                      sponsored 6- days FDP on “ Applications of Artificial Intelligence and IoT in Engineering
-                      organised by department of Computer Science and Engineering at College of Engineering, Perumon,
-                      February 01-06, 2021 (Date: 05/02/2021)</td>
+                    <td>Ms. Mahima Mary Mathews delivered a lecture on Quantum Cryptography and its application in Cyber security in the webinar organized by Quantum Computing Knowledge Club, SITAICS, Rashtriya Raksha University, National Security and Police University of India, Gujarat. (18-Jan-2022)</td>
                   </tr>
                   <tr>
                     <th>8</th>
-                    <td>Dr. Panchami V, Delivered a talk on” Block chain Technology” AICTE sponsored Six days STTP on
-                      Emerging Trends in Cryptography and its Applications in Cyber Security organised by the
-                      department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
-                      1- 14-12-2020 to 19-12-2020) (Date: 16/12/2020)</td>
+                    <td>Dr. Panchami V, Delivered an  Expert Lecturer on ‘Blockchain Technology’ on 22nd December, 2021 in Five-days Online Faculty Development Program on “Cyber Security and Blockchain Technology (CSBT-2021)” (20-24 December, 2021) organized by Department of Computer Science and Engineering, IIIT Bhagalpur</td>
                   </tr>
                   <tr>
                     <th>9</th>
-                    <td>Dr. Panchami V, Delivered a talk on” Block chain and its Applications” AICTE sponsored Six
-                      days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organised by
-                      the department of Computer Science and Engineering at Vidya Academy of Science and Technology.
-                      (TERM 2- 21-12-2020 to 28-12-2020) (Date: 23/12/2020)</td>
+                    <td>Dr. Panchami V, Delivered a talk on “IoT Security” organized by Amal Jyothi College of Engineering  as part of KTU sponsored 3-day FDP. September 01-03, 2021. (Date: 03/09/2021 )</td>
                   </tr>
                   <tr>
                     <th>10</th>
-                    <td>Dr. Panchami V, Delivered a talk on” Block chain and Bitcoin” AICTE sponsored Six days STTP on
-                      Emerging Trends in Cryptography and its Applications in Cyber Security organized by the
-                      department of Computer Science and Engineering at Vidya Academy of Science and Technology (TERM
-                      3- 1-2-2021 to 06-02-2021) (Date: 3/02/2021)</td>
+                    <td>Dr. Panchami V, Delivered a talk  on “IoT Security: Lightweight Cryptography” organized by College of Engineering karunagappally as part of AICTE sponsored 5-day STTP on Big Data and Security. March 22-26, 2021. (Date: 25/03/2021 )</td>
                   </tr>
                   <tr>
                     <th>11</th>
-                    <td>Dr. Panchami V, Delivered a lecture on IoT security organized by Department Electronic and
-                      Communication Engineering, Sree Chitra Thirunal College of Engineering, Thiruvananthapuram,
-                      Kerala on 23rd July 2019 in AICTE sponsored Faculty Development Program (FDP) on Internet of
-                      Things. (Date: 23/07/2019)</td>
+                    <td>Dr. Panchami V, Delivered a talk  on “Introduction to Blockchain Technology and its Applications '' organized by College of Engineering karunagappally as part of AICTE sponsored 5-day STTP on Big Data and Security. March 22-26, 2021 (Date: 23/03/2021)</td>
                   </tr>
                   <tr>
                     <th>12</th>
-                    <td>Ms. Mahima Mary Mathews delivered a lecture on Quantum Cryptography and its application in
-                      Cyber security in the webinar organized by Quantum Computing Knowledge Club, SITAICS, Rashtriya
-                      Raksha University, National Security and Police University of India, Gujarat. (18-Jan-2022)</td>
+                    <td>Dr. Panchami V, Delivered a talk  on “ Introduction to IoT and Design of IoT systems” TEQIP-II sponsored 6- days FDP on “ Applications of Artificial Intelligence and IoT in Engineering organised by  department of Computer Science and Engineering at College of Engineering, Perumon, February 01-06, 2021 (Date: 05/02/2021)
+                    </td>
                   </tr>
                   <tr>
                     <th>13</th>
-                    <td>Ms. Mahima Mary Mathews delivered a talk on Cyber Security in Cyber era in the seminar
-                      conducted as part of “Ente Keralam”-2nd tenure 1st anniversary celebration of Kerala State
-                      Government hosted by Cybercell, Alappuzha. (16-May-2022)</td>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain Technology” AICTE sponsored Six days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organised by the department of Computer Science and Engineering at Vidya Academy of Science and Technology        	(TERM 1- 14-12-2020 to 19-12-2020) (Date: 16/12/2020)</td>
+                  </tr>
+                  <tr>
+                    <th>14</th>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain and its Applications” AICTE sponsored Six days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organised by the department of Computer Science and Engineering at Vidya Academy of Science and Technology. (TERM 2- 21-12-2020 to 28-12-2020) (Date: 23/12/2020)</td>
+                  </tr>
+                  <tr>
+                    <th>15</th>
+                    <td>Dr. Panchami V, Delivered a talk on” Block chain and Bitcoin” AICTE sponsored Six days STTP on Emerging Trends in Cryptography and its Applications in Cyber Security organized by the department of Computer Science and Engineering at Vidya Academy of Science and Technology        	(TERM 3- 1-2-2021 to 06-02-2021) (Date: 3/02/2021)</td>
+                  </tr>
+                  <tr>
+                    <th>16</th>
+                    <td>Dr. Panchami V, Delivered a lecture on IoT security organized by Department Electronic and Communication Engineering, Sree Chitra Thirunal College of Engineering, Thiruvananthapuram, Kerala on 23rd July 2019 in AICTE sponsored Faculty Development Program (FDP) on Internet of Things. (Date: 23/07/2019)</td>
                   </tr>
                 </tbody>
               </table>
@@ -1241,7 +1219,7 @@
 
 
       <!-- events -->
-      <div class="accordion-item">
+      <div class="accordion-item my-3" style="border:double #d0e6f0; border-width: 12px;" id="E1">
         <h2 class="accordion-header" id="headingFive">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -1251,12 +1229,9 @@
         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
           data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <div class="table-responsive">
+            <div class="table-responsive my-3">
               <table class="table table-striped table-hover align-middle">
                 <thead>
-                  <tr>
-                    <th>Upcoming Events</th>
-                  </tr>
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Event</th>
@@ -1267,27 +1242,99 @@
                   </tr>
                 </thead>
                 <tbody>
-                  
-                </tbody>
-              </table>
-            
-            
-              <table class="table table-striped table-hover align-middle">
-                <thead>
                   <tr>
-                    <th>Past Events</th>
+                    <th colspan="5" class="text-center">Upcoming Events</th>
+                    <th></th>
+                </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>Conference</td>
+                    <td>IEEE International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security (iQ-CCHESS’23)</td>
+                    <td></td>
+                    <td>15, 16 September 2023</td>
+                    <td>http://iqcchess23.iiitkottayam.ac.in/</td>
                   </tr>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Event</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Sponsored by </th>
-                    <th scope="col">Dates</th>
-                    <th scope="">Organized by Faculty Member</th>
+                    <th>2</th>
+                    <td>Workshop</td>
+                    <td>Advanced Cryptography: Possibilities and Challenges </td>
+                    <td></td>
+                    <td>26- 27 November 2022</td>
+                    <td></td>
                   </tr>
-                </thead>
-                <tbody>
-                  
+                  <tr>
+                    <th colspan="5" class="text-center">Past Events</th>
+                    <th></th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <td>Webinar</td>
+                  <td>Cloud security</td>
+                  <td>CyberLabs, IIIT Kottayam</td>
+                  <td>June 10-12 2022 (3 days)</td>
+                  <td>Dr. Lavanya Settipalli,<br> 
+                    Dr. E. Silambarasan</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>FDP</td>
+                  <td>Cyber Security and Digital Forensics</td>
+                  <td>AICTE ATAL</td>
+                  <td>December 1- 5, 2020 (5 days)</td>
+                  <td>Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Webinar</td>
+                  <td>Cyber Security Series of Webinar I</td>
+                  <td>CyberLabs, IIIT Kottayam</td>
+                  <td>November 12 - 14, 2021 (3 days)</td>
+                  <td>Dr. Manjith B C <br>
+                    Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <td>Webinar</td>
+                  <td>Cyber Security Series of Webinar II</td>
+                  <td>CyberLabs, IIIT Kottayam</td>
+                  <td>November 20, 2021 (1 day)</td>
+                  <td>Dr. Manjith B C <br>
+                    Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <td>FDP</td>
+                  <td>Big Data Security and Analytics</td>
+                  <td>AICTE ATAL</td>
+                  <td>December 6- 10 2021 (5 days)</td>
+                  <td>Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>6</th>
+                  <td>Webinar</td>
+                  <td>Cyptography and its Applications</td>
+                  <td>CyberLabs, IIIT Kottayam</td>
+                  <td>7/24/2020</td>
+                  <td>Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>7</th>
+                  <td>Webinar</td>
+                  <td>How to formulate a high impact publication</td>
+                  <td>ACM/ IEEE Student Chapter IIIT Kottayam</td>
+                  <td>7/16/2020</td>
+                  <td>Dr. Mathew C D <br>
+                    Dr. Panchami V</td>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <td>Webinar</td>
+                  <td>Industry 4.0 for Discrete Manufacturing</td>
+                  <td>ACM/ IEEE Student Chapter IIIT Kottayam</td>
+                  <td>7/6/2020</td>
+                  <td>Dr. Ebin Deni Raj <br>
+                    Dr. Panchami V</td>
+                </tr>
                 </tbody>
               </table>
             </div>
@@ -1295,6 +1342,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
   <!-- Events Organised -->
 
