@@ -67,9 +67,11 @@
 }
 
 .img-thumbnail-1{
+  object-fit: cover;
   border-radius: 50%;
   max-height: 300px;
   max-width: 300px;
+  min-width: 275px;
   margin: 10px auto;
 }
 .card .row .my-md-3{
