@@ -5,6 +5,10 @@
 .navbar-dark .navbar-nav .nav-link {
   color: rgb(255 255 255) !important;
 }
+
+.small{
+  color: #0cbfe9 !important;
+}
 .row{
   justify-content: right;
 }
