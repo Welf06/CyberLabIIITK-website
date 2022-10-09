@@ -1,3 +1,57 @@
+
+
+.landing-page{
+  width: 100%;
+  height: 500px
+}
+
+.landing-title{
+  padding-top: 380px;
+}
+@media screen and (min-width: 768px) {
+  .landing-page{
+    width: 100%;
+    height: 600px
+  }
+  
+  .landing-title{
+    padding-top: 500px;
+  }
+
+  .scrolling-text{
+    /* padding-top: 550px; */
+    font-size: 1.5rem;
+    height: 50px;	
+    overflow: hidden;
+    position: relative;
+    background: #97beff;
+    color: #1D1A49;
+    border: 1px solid #1d1a49;
+    font-weight: 500;
+  }
+   .scrolling-text p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform:translateX(100%);
+    /* Apply animation to this element */
+    animation: scroll-left 15s linear infinite;
+   }
+   /* Move it (define the animation) */
+   @keyframes scroll-left {
+    0%   {
+    transform: translateX(100%); 		
+    }
+    100% {
+    transform: translateX(-100%); 
+    }
+   }
+}
+
 .body{
   background: #D7EDF8 !important;
 }
@@ -86,6 +140,7 @@
 }
 
 .row-2 {
+  padding: 0px 40px;
   --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
@@ -122,6 +177,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   color: #1D1A49;
+  text-align: center;
 }
 .accordion-button{
   background: #1D1A49 !important;
