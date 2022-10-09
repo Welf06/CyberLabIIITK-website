@@ -69,13 +69,24 @@
 .img-thumbnail-1{
   object-fit: cover;
   border-radius: 50%;
-  max-height: 300px;
-  max-width: 300px;
-  min-width: 275px;
+  max-height: 225px;
+  max-width: 225px;
+  min-width: 200px;
   margin: 10px auto;
 }
 .card .row .my-md-3{
   display: flex !important;
+}
+
+.row-2 {
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+  justify-content: center;
 }
 .list-group:first-child{
   flex: 1 !important;
@@ -89,7 +100,22 @@
   flex: 1 !important;
 }
 
+.sub-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  margin: 20px;
+  margin-top: 30px;
+  border-top: 5px solid #1d1a4984 !important;
+  border-bottom: 5px solid #1d1a4984 !important;
+}
 
+.sub-text{
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1D1A49;
+}
 .accordion-button{
   background: #1D1A49 !important;
   color: #EFF8FD !important;
@@ -100,7 +126,9 @@
     border-color: #1D1A49 !important;
     outline: 0;
     box-shadow: 0 0 0 0rem rgba(29, 26, 73, 0.25) !important;
+    background-color: #363085 !important;
 }
+
 
 .accordion-body .table, .accordion-body .table>:not(caption)>*>* {
   background: #1D1A49 !important;
@@ -136,6 +164,14 @@
 .accordion-item:last-of-type .accordion-button.collapsed{
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
+}
+
+.gallery-title{
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: #EFF8FD;
+  padding: 20px;
+  text-align: center;
 }
 
 .contact-area {
