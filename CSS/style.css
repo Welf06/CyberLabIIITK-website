@@ -2,6 +2,9 @@
   background: #D7EDF8 !important;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255 255 255) !important;
+}
 .row{
   justify-content: right;
 }
