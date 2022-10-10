@@ -2,7 +2,10 @@
   font-family: 'ubuntu';
   src: url('../assets/Fonts/Ubuntu-Regular.ttf') format('truetype'),
 }
-
+.current-org{
+  color: black;
+  font-size: 0.7rem;
+}
 .landing-page{
   width: 100%;
   height: 500px
