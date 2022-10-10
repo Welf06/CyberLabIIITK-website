@@ -24,7 +24,7 @@
 }
  .scrolling-text p {
   position: absolute;
-  width: 100%;
+  width: max-content;
   height: 100%;
   margin: 0;
   line-height: 50px;
@@ -32,7 +32,7 @@
   /* Starting position */
   transform:translateX(100%);
   /* Apply animation to this element */
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 25s linear infinite;
  }
  /* Move it (define the animation) */
  @keyframes scroll-left {
@@ -63,6 +63,10 @@
   .row-2{
     padding: 0px 40px;
   }
+}
+
+.row-2{
+  padding: 0px 13px;
 }
 
 .body{
@@ -147,6 +151,15 @@
   max-width: 225px;
   min-width: 200px;
   margin: 10px auto;
+}
+.img-thumbnail-2{
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem;
+  min-width: 100%;
 }
 .card .row .my-md-3{
   display: flex !important;
