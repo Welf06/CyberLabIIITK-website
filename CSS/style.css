@@ -47,6 +47,53 @@
   }
  }
 
+ .marquee-w {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  text-align: left;
+  margin-top: 5%;
+}
+.marquee {
+  position: absolute;
+  display: block;
+  margin: auto auto;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: max-content;
+  height: 100%;
+  padding: 0px 0px;
+}
+.marquee span {
+  padding-left: 50%;
+  padding-right: 60%;
+  display: inline-block;
+  font-family: 'poppinsbold';
+  text-align: left;
+  white-space: nowrap;
+  min-width: 100%;
+  height: 100%;
+  line-height: 3.5rem;
+  font-size: 1.5rem;
+  animation: marquee 40s linear infinite;
+}
+.marquee2 span {
+  animation-delay: 20s;
+}
+@keyframes marquee {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-100%, 0);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .landing-page{
     width: 100%;
@@ -65,6 +112,43 @@
 
   .row-2{
     padding: 0px 40px;
+  }
+  .marquee-w {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    margin-top: 5%;
+  }
+  .marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: max-content;
+    height: 100%;
+  }
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    font-family: 'poppinsbold';
+    text-align: center;
+    white-space: nowrap;
+    min-width: max-content;
+    height: 100%;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+    animation: marquee 25s linear infinite;
+    padding-right: 10rem ;
+  }
+  .marquee2 span {
+    animation-delay: 12.5s;
+    padding-right: 10rem;
   }
 }
 
@@ -435,3 +519,4 @@ canvas {
     0 0 8px #0fa,
     0 0 10px #0fa;
 }
+
