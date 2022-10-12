@@ -26,6 +26,7 @@
     overflow: hidden;
     text-align: left;
     margin-top: 5%;
+    color: #465a1e;
   }
   .marquee {
     position: absolute;
@@ -94,6 +95,7 @@
     transform: translate(-50%, -50%);
     overflow: hidden;
     margin-top: 5%;
+    color: #465a1e;
   }
   .marquee {
     position: absolute;
