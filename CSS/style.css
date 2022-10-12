@@ -14,47 +14,48 @@
 .landing-title{
   padding-top: 380px;
 }
- .marquee-w {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 3.5rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  text-align: left;
-  margin-top: 5%;
-}
-.marquee {
-  position: absolute;
-  display: block;
-  margin: auto auto;
-  white-space: nowrap;
-  overflow: hidden;
-  min-width: max-content;
-  height: 100%;
-  padding: 0px 0px;
-}
-.marquee span {
-  padding-left: 60%;
-  padding-right: 70%;
-  display: inline-block;
-  font-family: 'poppinsbold';
-  text-align: left;
-  white-space: nowrap;
-  min-width: 100%;
-  height: 100%;
-  line-height: 3.5rem;
-  font-size: 1.5rem;
-  animation: marquee 40s linear infinite;
-}
-.marquee2 span {
-  animation: marquee 50s linear infinite;
-  padding-left: 60%;
-  padding-right: 70%;
-  text-align: center;
-  animation-delay: 15.5s;
+@media screen and (max-width: 767px){
+  .marquee-w {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    text-align: left;
+    margin-top: 5%;
+  }
+  .marquee {
+    position: absolute;
+    display: block;
+    margin: auto auto;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: max-content;
+    height: 100%;
+    padding: 0px 0px;
+  }
+  .marquee>span {
+    padding-left: 20%;
+    display: inline-block;
+    font-family: 'poppinsbold';
+    text-align: left;
+    white-space: nowrap;
+    min-width: 100%;
+    height: 100%;
+    line-height: 3.5rem;
+    font-size: 1.5rem;
+    animation: marquee 60s linear infinite;
+  }
+  .marquee2 span {
+    animation: marquee 50s linear infinite;
+    padding-left: 60%;
+    padding-right: 70%;
+    text-align: center;
+    animation-delay: 15.5s;
+  }
 }
 @keyframes marquee {
   0% {
@@ -63,8 +64,7 @@
   100% {
       transform: translate(-100%, 0);
   }
-}
-
+}  
 @media screen and (min-width: 768px) {
   .landing-page{
     width: 100%;
@@ -104,25 +104,26 @@
     min-width: max-content;
     height: 100%;
   }
-  .marquee span {
+  .marquee>span {
     display: inline-block;
-    padding-left: 100%;
-    padding-right: 100%;
-    padding-right: 20rem ;
+    padding-left: 35%;
     font-family: 'poppinsbold';
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
     min-width: max-content;
     height: 100%;
     line-height: 3.5rem;
-    font-size: 1.5rem;
-    animation: marquee 30s linear infinite;
+    font-size: 1.6rem;
+    animation: marquee 50s linear infinite;
+    padding-right: 20rem;
+  }
+  .marquee>span>span{
+    padding-right: 20rem;
   }
   .marquee2 span {
-    padding-left: 60%;
-    animation: marquee 30s linear infinite;
+    padding-left: 100%;
     padding-right: 20rem;
-    animation-delay: 16.75s;
+    animation-delay: 20s;
     /* padding-right: 10rem; */
   }
 }
