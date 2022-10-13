@@ -47,7 +47,7 @@
     min-width: 100%;
     height: 100%;
     line-height: 3.5rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .marquee2 span {
     animation: marquee 50s linear infinite;
