@@ -39,7 +39,7 @@
     padding: 0px 0px;
   }
   .marquee>span {
-    padding-left: 20%;
+    padding-left: 10%;
     display: inline-block;
     font-family: 'poppinsbold';
     text-align: left;
@@ -48,7 +48,6 @@
     height: 100%;
     line-height: 3.5rem;
     font-size: 1.5rem;
-    animation: marquee 60s linear infinite;
   }
   .marquee2 span {
     animation: marquee 50s linear infinite;
