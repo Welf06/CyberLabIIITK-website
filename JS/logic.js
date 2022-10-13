@@ -72,7 +72,7 @@ Nav[7].addEventListener("click", function () {
 //    }
 //  }
  
- let x = window.matchMedia("(min-width: 768px)")
- myFunction(x) 
+//  let x = window.matchMedia("(min-width: 768px)")
+//  myFunction(x) 
 
 
