@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyberlabs</title>
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/favicon1.png" type="image/x-icon">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
@@ -13,7 +15,8 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 
 <body style="background-color: #D7EDF8;" onload="start()">
@@ -92,8 +95,9 @@
     <div class="row" style="padding-bottom: 10px;">
       <div class="col">
         <div class="card " id="introCard" style="border: 0px;">
+          <!-- <h1 class="card-title">CyberLabs</h1> -->
           <div class="card-body text-center " id="introCL" style="color: #262262; ">
-
+            
           </div>
         </div>
       </div>
@@ -2139,7 +2143,7 @@ height: 8px;">
                       <th scope="col">#</th>
                       <th scope="col">Organisation</th>
                       <th scope="col">Purpose</th>
-                      <th scope="col">Fund</th>
+                      <th scope="col">Funding</th>
                       <th scope="col">Duration</th>
                       <th scope="col">Status</th>
                     </tr>
@@ -2718,18 +2722,21 @@ height: 8px;">
   <!-- bootstrap -->
   <script>
     var i = 0;
-    var txt = "The Cybersecurity Research Group, IIIT Kottayam.";
+    var j = 0;
+    var txt = "CyberLabs "
+    var txt1 = "Cybersecurity Research Group, IIIT Kottayam";
     var speed = 70;
+    var speed2 = 70;
     function start() {
       typeWriter();
     }
     function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("introCL").innerHTML += txt.charAt(i);
+      if (i < txt1.length) {
+        document.getElementById("introCL").innerHTML += txt1.charAt(i);
         i++;
         setTimeout(typeWriter, speed);
       }
-      if (i== txt.length){
+      if (i== txt1.length){
         document.querySelector(".marquee>span").style.visibility = "visible";
         document.querySelector(".marquee>span").classList.add("scrolling");
         console.log("done");
@@ -2737,7 +2744,7 @@ height: 8px;">
     }
     function typeWriter2() {
       if (j < txt.length) {
-        document.getElementById("CLintro2").innerHTML += txt.charAt(j);
+        document.getElementById("introCL2").innerHTML += txt.charAt(j);
         j++;
         setTimeout(typeWriter2, speed2);
       }
