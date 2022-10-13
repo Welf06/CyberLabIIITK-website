@@ -55,22 +55,22 @@ Nav[7].addEventListener("click", function () {
 }
 );
 
-const scrollingText = document.querySelector(".marquee>span");
-// remove a stlying from scrolling text
+// const scrollingText = document.querySelector(".marquee>span");
+// // remove a stlying from scrolling text
 
-function myFunction(x) {
-   if (x.matches) { // If media query matches
-      setTimeout(function() {
-         scrollingText.style.paddingLeft = "23%";
-         console.log("removed")
-      }, 48000);
-   } else {
-      setTimeout(function() {
-         scrollingText.style.paddingLeft = "10%";
-         console.log("removed")
-      }, 59000);
-   }
- }
+// function myFunction(x) {
+//    if (x.matches) { // If media query matches
+//       setTimeout(function() {
+//          scrollingText.style.paddingLeft = "23%";
+//          console.log("removed")
+//       }, 48000);
+//    } else {
+//       setTimeout(function() {
+//          scrollingText.style.paddingLeft = "10%";
+//          console.log("removed")
+//       }, 59000);
+//    }
+//  }
  
  let x = window.matchMedia("(min-width: 768px)")
  myFunction(x) 
