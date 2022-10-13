@@ -117,6 +117,10 @@
         i++;
         setTimeout(typeWriter, speed);
       }
+      if (i== txt.length){
+        document.querySelector(".marquee>span").style.visibility = "visible";
+        console.log("done");
+      }
     }
     function typeWriter2() {
       if (j < txt.length) {

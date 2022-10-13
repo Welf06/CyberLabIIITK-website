@@ -119,6 +119,7 @@
     font-size: 1.6rem;
     animation: marquee 50s linear infinite;
     padding-right: 20rem;
+    visibility: hidden;
   }
   .marquee>span>span{
     padding-right: 20rem;
