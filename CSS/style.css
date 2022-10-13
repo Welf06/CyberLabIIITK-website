@@ -84,6 +84,7 @@
 
   .row-2{
     padding: 0px 40px;
+    gap: 25px;
   }
   .marquee-w {
     position: relative;
