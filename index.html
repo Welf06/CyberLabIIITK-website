@@ -98,39 +98,6 @@
         </div>
       </div>
     </div>
-      <!-- AOS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <!-- bootstrap -->
-  <script>
-    var i = 0;
-    var txt = "The Cybersecurity Research Group, IIIT Kottayam.";
-    var speed = 70;
-    function start() {
-      typeWriter();
-    }
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("introCL").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-      if (i== txt.length){
-        document.querySelector(".marquee>span").style.visibility = "visible";
-        document.querySelector(".marquee>span").classList.add("scrolling");
-        console.log("done");
-      }
-    }
-    function typeWriter2() {
-      if (j < txt.length) {
-        document.getElementById("CLintro2").innerHTML += txt.charAt(j);
-        j++;
-        setTimeout(typeWriter2, speed2);
-      }
-    }
-  </script>
     <div class="marquee-w">
       <div class="marquee">
         &nbsp;&nbsp;<span>IEEE International Conference on Quantum Technologies, Communications, Computing, Hardware and Embedded Systems Security - iQ-CCHESS,15,16 September 2023 <a href="http://iqcchess23.iiitkottayam.ac.in">http://iqcchess23.iiitkottayam.ac.in</a>&nbsp;&nbsp;<span></span> Call for papers is open for "Intelligent Wireless Sensor Networks and the Internet of Things : Algorithms, Methodologies and Applications", part of Book series "Wireless Communication and Advancements" - <a href="https://easychair.org/conferences/?conf=intelligentwsn2023" target="_blank"> https://easychair.org/conferences/?conf=intelligentwsn2023</a></span>&nbsp;&nbsp;
@@ -2743,6 +2710,39 @@ height: 8px;">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+          <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- bootstrap -->
+  <script>
+    var i = 0;
+    var txt = "The Cybersecurity Research Group, IIIT Kottayam.";
+    var speed = 70;
+    function start() {
+      typeWriter();
+    }
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("introCL").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      if (i== txt.length){
+        document.querySelector(".marquee>span").style.visibility = "visible";
+        document.querySelector(".marquee>span").classList.add("scrolling");
+        console.log("done");
+      }
+    }
+    function typeWriter2() {
+      if (j < txt.length) {
+        document.getElementById("CLintro2").innerHTML += txt.charAt(j);
+        j++;
+        setTimeout(typeWriter2, speed2);
+      }
+    }
+  </script>
   <script src="./JS/main.js"></script>
   <script src="./JS/logic.js"></script>
 </body>
