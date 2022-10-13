@@ -419,9 +419,17 @@ footer img {
 
   text-shadow: 2px 2px 2px #d7edf8;
   font-family: 'Exo 2', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
+
+@media screen and (min-width: 768px){
+  #introCL {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
 
 #introCL2 {
   font-family: "Sofia", cursive;
