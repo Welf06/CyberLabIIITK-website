@@ -14,6 +14,41 @@
 .landing-title{
   padding-top: 380px;
 }
+
+.navbar-container{
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar-color{
+  background-color: #1d1a49c2;
+  animation: colorChange 0.5s linear;
+}
+
+.navbar-color-transparent{
+  background-color: transparent;
+  animation: colorChangeRev 0.5s linear;
+}
+
+@keyframes colorChange {
+  0% {
+      background-color: #1d1a4900;
+  }
+  100% {
+      background-color: #1d1a49c2;
+  }
+}
+@keyframes colorChangeRev {
+  100% {
+      background-color: #1d1a4900;
+  }
+  0% {
+      background-color: #1d1a49c2;
+  }
+}
+
 @media screen and (max-width: 767px){
   .marquee-w {
     position: relative;

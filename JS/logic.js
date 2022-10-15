@@ -55,24 +55,20 @@ Nav[7].addEventListener("click", function () {
 }
 );
 
-// const scrollingText = document.querySelector(".marquee>span");
-// // remove a stlying from scrolling text
+// navbar color logic
+let navbar = document.querySelector(".navbar-container")
+onscroll = () => {
+      // console.log(window.scrollY, navbar.clientHeight)
+      if (window.scrollY > 50 || document.documentElement.scrollTop >= 200 ){
+         navbar.classList.add("navbar-color");
+         navbar.classList.remove("navbar-color-transparent");
+      }
+      else{
+         navbar.classList.add("navbar-color-transparent");
+         navbar.classList.remove("navbar-color");
+         console.log("removed")
+      }
+   }
 
-// function myFunction(x) {
-//    if (x.matches) { // If media query matches
-//       setTimeout(function() {
-//          scrollingText.style.paddingLeft = "23%";
-//          console.log("removed")
-//       }, 48000);
-//    } else {
-//       setTimeout(function() {
-//          scrollingText.style.paddingLeft = "10%";
-//          console.log("removed")
-//       }, 59000);
-//    }
-//  }
- 
-//  let x = window.matchMedia("(min-width: 768px)")
-//  myFunction(x) 
 
 
