@@ -20,6 +20,10 @@
   top: 0;
   z-index: 100;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+} @media screen and (max-width: 767px){
+  .navbar-container{
+    position: relative;
+  }
 }
 
 .navbar-color{
@@ -27,28 +31,56 @@
   animation: colorChange 0.5s linear;
 }
 
+.navbar-hide{
+  transform: translateY(-80%);
+  animation: navDown 0.5s linear;
+}
+
+@keyframes navDown {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-80%);
+  }
+}
+
+.navbar-show{
+  transform: translateY(0%);
+  animation: navUp 0.5s linear;
+}
+
+@keyframes navUp {
+  100% {
+      transform: translateY(0);
+  }
+  0% {
+      transform: translateY(-80%);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+      background-color: transparent;
+  }
+  100% {
+      background-color: #1d1a49c2;
+  }
+}
+
 .navbar-color-transparent{
   background-color: transparent;
   animation: colorChangeRev 0.5s linear;
 }
 
-@keyframes colorChange {
-  0% {
-      background-color: #1d1a4900;
-  }
-  100% {
-      background-color: #1d1a49c2;
-  }
-}
 @keyframes colorChangeRev {
   100% {
-      background-color: #1d1a4900;
+      background-color: transparent;
   }
   0% {
       background-color: #1d1a49c2;
   }
 }
-
 @media screen and (max-width: 767px){
   .marquee-w {
     position: relative;
@@ -101,8 +133,9 @@
   }
 }  
 .scrolling{
-  animation: marquee 50s linear infinite;
+  animation: marquee 80s linear infinite;
 }
+
 @media screen and (min-width: 768px) {
   .landing-page{
     width: 100%;
@@ -146,7 +179,7 @@
   }
   .marquee>span {
     display: inline-block;
-    padding-left: 25%;
+    padding-left: 15%;
     font-family: 'poppinsbold';
     text-align: left;
     white-space: nowrap;
